@@ -3,52 +3,67 @@
   --link-color: #4a76ee;
   --background-color: #eeeff1;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
-  max-width: 1700px;
   margin: 0 auto;
 }
 
-a{
-    color: var(--link-color);
-    text-decoration: none;
+a {
+  color: var(--link-color);
+  text-decoration: none;
 }
 
-#nav-bar{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
-    height: 80px;
-    align-items: center;
-
-}
-.logo a{
-    color: var(--text-color);
-    font-size: 22px;
-    font-weight: 600;
-}
-.nav-container a{
-    margin: 0 10px;
-    text-decoration: none;
-    color: var(--text-color);    
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 150px;
+  height: 80px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  z-index: 100;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
 }
 
-#nav-bar .nav-container a:last-child{
-     color: var(--background-color);
-     background-color: var(--text-color);
-     padding: 5px 15px;
-     border-radius: 5px;
+.logo a {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 600;
 }
+.nav-container a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-container a i {
+  margin-right: 6px;
+}
+
+#nav-bar .nav-container a:last-child {
+  color: var(--background-color);
+  background-color: var(--text-color);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+main {
+  padding-top: 80px;
+  max-width: 1750px;
+  margin: 0 auto;
+}
+
 /* SECTION 1: Hero */
 .hero-section {
   display: flex;
@@ -59,7 +74,6 @@ a{
   margin-bottom: 100px;
   gap: 150px;
 }
-
 
 .hero-section .text h2 {
   font-size: 45px;
@@ -76,7 +90,7 @@ a{
   border-radius: 5px;
   margin-right: 10px;
   margin-bottom: 10px;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .hero-section .text .links a:hover {
@@ -94,7 +108,7 @@ a{
   border-radius: 50%;
 }
 
- /* SECTION 2: Skills  */
+/* SECTION 2: Skills  */
 .skills-section {
   padding: 0 50px;
   margin-bottom: 100px;
@@ -140,18 +154,58 @@ a{
   font-size: 18px;
 }
 
+/* testimony  */
+.testimony-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.testimony-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.testimony-section .group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.testimony-section .group .profile-pic {
+  text-align: center;
+  flex: 2;
+}
+
+.testimony-section .group .profile-pic img {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimony-section .group .profile-pic p {
+  font-weight: 600;
+}
+
+.testimony-section .group .profile-pic p:last-child {
+  font-weight: normal;
+}
+
+.testimony-section .group .text {
+  flex: 8;
+}
 
 @media (max-width: 600px) {
-     #nav-bar {
+  #nav-bar {
     padding: 0 20px;
   }
-    #nav-bar .nav-container a {
+  #nav-bar .nav-container a {
     font-size: 22px;
   }
-   #nav-bar .nav-container a span {
+  #nav-bar .nav-container a span {
     display: none;
   }
-  #nav-bar .nav-container a:last-child{
+  #nav-bar .nav-container a:last-child {
     color: var(--text-color);
     background-color: transparent;
     padding: 0;
