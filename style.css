@@ -49,7 +49,7 @@ a {
 }
 
 .nav-container a i {
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 #nav-bar .nav-container a:last-child {
@@ -59,7 +59,6 @@ a {
   border-radius: 5px;
 }
 main {
-  padding-top: 80px;
   max-width: 1750px;
   margin: 0 auto;
 }
@@ -70,9 +69,9 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  margin: 50px 0;
   margin-bottom: 100px;
   gap: 150px;
+  height: 100vh;
 }
 
 .hero-section .text h2 {
@@ -173,7 +172,6 @@ main {
 
 .testimony-section .group .profile-pic {
   text-align: center;
-  flex: 2;
 }
 
 .testimony-section .group .profile-pic img {
@@ -191,9 +189,7 @@ main {
   font-weight: normal;
 }
 
-.testimony-section .group .text {
-  flex: 8;
-}
+
 
 @media (max-width: 600px) {
   #nav-bar {
