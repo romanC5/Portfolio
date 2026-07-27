@@ -3,87 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Roman Dangol | Portfolio</title>
+    <meta name="description" content="Roman Dangol — Frontend Developer & Cybersecurity Student. View my projects, skills, and get in touch.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
     <nav id="nav-bar">
         <div class="logo">
-            <a href="./index.html">Roman Dangol</a>
+            <a href="#home">Roman Dangol</a>
         </div>
-        <div class="nav-container">
-                <a href="#home"><i class="fa-solid fa-house"></i><span>Home</span></a>
-                <a href="#skills"><i class="fa-solid fa-code"></i><span>Skills</span></a>
-                <a href="#testimony"><i class="fa-solid fa-pen"></i><span>Testimony</span> </a>
-                <a href="#about"><i class="fa-solid fa-user"></i><span>About</span></a>
-                <a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
-                
+        <div class="nav-container" id="navContainer">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#certifications" class="nav-link">Certs</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
     <main>
-        <!-- Hero section -->
-        <section class="hero-section" id="home">
-            <div class="text">
-               <h2>Hi it's me Roman Dangol <span>👋</span></h2>
-               <h3> And I am a <span class="multiple-text"></span></h3>
-               <p>A dedicated Cybersecurity & Networking student based in Tokha, Kathmandu, currently pursuing a Bachelor of Computer Science. With a strong interest in cybersecurity, networking, and software development, I'm constantly expanding my knowledge and building practical projects that strengthen my technical expertise and problem-solving skills. I'm always eager to learn, collaborate, and contribute to meaningful technology solutions.</p>
-               <div class="links">
-                 <a href="https://github.com/romanC5" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> <span>GitHub</span></a>
-                <a href="https://www.linkedin.com/in/roman-dangol-718803358/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> <span>Linkedin</span></a>
-                <a href="mailto:romandangol91@gmail.com"><i class="fa-solid fa-envelope"></i> <span>Email</span></a>
-               </div>
+       <!-- hero section -->
+        <section class="hero" id="home">
+            <div class="hero-content fade-in">
+                <div class="hero-tag">Frontend Developer & Cybersecurity Student</div>
+                <h1>
+                    HEY <span class="wave">&#x1F44B;</span><br>
+                    I'M<br>
+                    <span class="highlight yellow">ROMAN</span><br>
+                    <span class="highlight pink">DANGOL</span>
+                </h1>
+                <div class="typed-wrapper">
+                    And I am a <span class="multiple-text"></span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#" class="btn btn-outline" id="resumeBtn">Download Resume</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/romanC5" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/roman-dangol-718803358/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:romandangol91@gmail.com" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-            <div class="profile-pic">
-                <img src="images/hero-headshot.webp" alt="profile picture of roman">
+            <div class="hero-image fade-in">
+                <div class="photo-card">
+                    <img src="images/hero-headshot.webp" alt="Roman Dangol — Frontend Developer and Cybersecurity Student">
+                </div>
+                <div class="shape shape-1" aria-hidden="true"></div>
+                <div class="shape shape-2" aria-hidden="true"></div>
+                <div class="shape shape-3" aria-hidden="true"></div>
             </div>
         </section>
 
-        <!-- skills section -->
+        <!-- About section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title fade-in">About <span class="highlight yellow">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-card fade-in" style="--accent: var(--yellow)">
+                    <div class="card-icon"><i class="fa-solid fa-user"></i></div>
+                    <h3>About Me</h3>
+                    <p>A dedicated and curious developer based in Tokha, Kathmandu, passionate about building secure and functional web applications. I love turning ideas into real projects and constantly pushing my technical boundaries.</p>
+                </div>
+                <div class="about-card fade-in" style="--accent: var(--pink)">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Education</h3>
+                    <p>Currently pursuing a Bachelor of Computer Science with a focus on cybersecurity and networking. Always seeking to learn beyond the classroom through hands-on projects and self-study.</p>
+                </div>
+                <div class="about-card fade-in" style="--accent: var(--blue)">
+                    <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Interests</h3>
+                    <p>Cybersecurity, ethical hacking, networking, web development, open-source contributing, and gaming. I enjoy exploring how systems work and how to make them more secure.</p>
+                </div>
+                <div class="about-card fade-in" style="--accent: var(--purple)">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Current Focus</h3>
+                    <p>Deepening my skills in frontend development and cybersecurity. Currently exploring React, building personal projects, and studying for security certifications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section -->
         <section id="skills" class="skills-section">
-            <h2>Skills</h2>
-            <div class="text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto labore ipsam tenetur hic, sed et laborum deleniti voluptate quidem molestias eaque doloremque? Numquam vero alias dolor natus accusamus quia veritatis laborum aliquam debitis minus, consequatur nostrum rerum ipsam id, similique eaque corrupti accusantium nisi perspiciatis! Laudantium recusandae nobis tempore nam?</p>
-            </div>
-
-            <div class="logos">
-                <div class="logo">
-                    <img src="images/html-logo.webp" alt="html logo"><span>HTML</span>
+            <h2 class="section-title fade-in">My <span class="highlight pink">Skills</span></h2>
+            <div class="skills-categories">
+                <div class="skill-category fade-in">
+                    <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag tag-yellow">HTML</span>
+                        <span class="skill-tag tag-blue">CSS</span>
+                        <span class="skill-tag tag-yellow">JavaScript</span>
+                        <span class="skill-tag tag-blue">React</span>
+                    </div>
                 </div>
-                <div class="logo">
-                    <img src="images/css-logo.webp" alt="html logo"><span>CSS</span>
+                <div class="skill-category fade-in">
+                    <h3><i class="fa-solid fa-server"></i> Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag tag-pink">Node.js</span>
+                        <span class="skill-tag tag-purple">Express</span>
+                        <span class="skill-tag tag-pink">MongoDB</span>
+                    </div>
                 </div>
-                <div class="logo">
-                    <img src="images/javascript-logo.webp" alt="html logo"><span>Javascript</span>
+                <div class="skill-category fade-in">
+                    <h3><i class="fa-solid fa-wrench"></i> Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag tag-purple">Git</span>
+                        <span class="skill-tag tag-blue">GitHub</span>
+                        <span class="skill-tag tag-yellow">Linux</span>
+                    </div>
                 </div>
-                <div class="logo">
-                    <img src="images/react-logo.webp" alt="html logo"><span>React.js</span>
+                <div class="skill-category fade-in">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Cybersecurity & Networking</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag tag-pink">Python</span>
+                        <span class="skill-tag tag-purple">Networking</span>
+                        <span class="skill-tag tag-blue">Cybersecurity</span>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- testimony section -->
-        <section id="testimony" class="testimony-section">
-            <h2>Testimony</h2>        
-
-            <div class="group">
-                    <div class="profile-pic">
-                        <img src="images/hero-headshot.webp" alt="profile picture of roman">
-                        <h3>Roman Dangol</h3>
-                        <p>Lorem ipsum dolor sit.</p>
+       <!-- project section -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title fade-in">Featured <span class="highlight purple">Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-thumb" style="--thumb-bg: var(--yellow)">
+                        <i class="fa-solid fa-globe"></i>
                     </div>
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto labore ipsam tenetur hic, sed et laborum deleniti voluptate quidem molestias eaque doloremque? Numquam vero alias dolor natus accusamus quia veritatis laborum aliquam debitis minus, consequatur nostrum rerum ipsam id, similique eaque corrupti accusantium nisi perspiciatis! Laudantium recusandae nobis tempore nam?</p>
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>Personal portfolio built with vanilla HTML, CSS, and JavaScript featuring a Neo Brutalism design, scroll animations, and responsive layout.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/romanC5" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                            <a href="https://www.dangolroman.com.np" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-thumb" style="--thumb-bg: var(--pink)">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Network Scanner</h3>
+                        <p>A Python-based network scanning tool that identifies active devices on a local network, detects open ports, and provides basic vulnerability insights.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Networking</span><span>Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/romanC5" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-thumb" style="--thumb-bg: var(--blue)">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Manager App</h3>
+                        <p>A full-stack task management application with user authentication, CRUD operations, and a clean drag-and-drop interface.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>Node.js</span><span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/romanC5" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                            <a href="#" class="btn btn-small btn-primary">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-thumb" style="--thumb-bg: var(--purple)">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>CLI Portfolio Tracker</h3>
+                        <p>A command-line tool that tracks and displays project progress, tech stack usage, and generates markdown summaries for GitHub READMEs.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span><span>Node.js</span><span>CLI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/romanC5" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Education Timeline -->
+        <section id="experience" class="timeline-section">
+            <h2 class="section-title fade-in">Education & <span class="highlight blue">Experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-card" style="--accent: var(--yellow)">
+                        <span class="timeline-date">2023 &mdash; Present</span>
+                        <h3>Bachelor of Computer Science</h3>
+                        <p>Tribhuvan University, Kathmandu</p>
+                        <p class="timeline-desc">Specializing in cybersecurity and networking. Actively involved in coding clubs and security research.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-card" style="--accent: var(--pink)">
+                        <span class="timeline-date">2024</span>
+                        <h3>Web Development Intern</h3>
+                        <p>Freelance / Personal Projects</p>
+                        <p class="timeline-desc">Built multiple responsive websites for local clients and contributed to open-source frontend projects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-card" style="--accent: var(--blue)">
+                        <span class="timeline-date">2024</span>
+                        <h3>Cybersecurity Research</h3>
+                        <p>Self-directed Learning</p>
+                        <p class="timeline-desc">Conducted network vulnerability assessments and built Python tools for penetration testing and security analysis.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-card" style="--accent: var(--purple)">
+                        <span class="timeline-date">2022</span>
+                        <h3>Higher Secondary Education</h3>
+                        <p>Kathmandu, Nepal</p>
+                        <p class="timeline-desc">Completed high school with a focus on science and mathematics. Developed initial interest in computer science.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Contact section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title fade-in">Get In <span class="highlight yellow">Touch</span></h2>
+            <div class="contact-wrapper">
+                <form class="contact-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required aria-label="Your name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required aria-label="Your email">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="6" required aria-label="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fa-solid fa-check-circle"></i> Message sent successfully!
+                    </div>
+                </form>
+                <div class="contact-info fade-in">
+                    <a href="https://github.com/romanC5" target="_blank" rel="noopener noreferrer" class="social-card">
+                        <i class="fa-brands fa-github"></i>
+                        <div>
+                            <span class="social-label">GitHub</span>
+                            <span class="social-value">romanC5</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/roman-dangol-718803358/" target="_blank" rel="noopener noreferrer" class="social-card">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div>
+                            <span class="social-label">LinkedIn</span>
+                            <span class="social-value">Roman Dangol</span>
+                        </div>
+                    </a>
+                    <a href="mailto:romandangol91@gmail.com" class="social-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <span class="social-label">Email</span>
+                            <span class="social-value">romandangol91@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Roman Dangol. Built with HTML, CSS & JS.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/3.0.0/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
