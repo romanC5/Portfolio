@@ -25,8 +25,7 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
             <a href="#projects" class="nav-link">Projects</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#certifications" class="nav-link">Certs</a>
+            <a href="#education" class="nav-link">Education</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -68,7 +67,7 @@
             </div>
             <div class="hero-image fade-in">
                 <div class="photo-card">
-                    <img src="images/" alt="Roman Dangol — Frontend Developer and Cybersecurity Student">
+                    <img src="images/profile.png" alt="Roman Dangol — Frontend Developer and Cybersecurity Student">
                 </div>
                 <div class="shape shape-1" aria-hidden="true"></div>
                 <div class="shape shape-2" aria-hidden="true"></div>
@@ -228,12 +227,12 @@
         </section>
 
         <!-- Education Timeline -->
-        <section id="experience" class="timeline-section">
-            <h2 class="section-title fade-in">Education & <span class="highlight blue">Experience</span></h2>
+        <section id="education" class="timeline-section">
+            <h2 class="section-title fade-in">Education 
             <div class="timeline">
                 <div class="timeline-item fade-in">
                     <div class="timeline-card" style="--accent: var(--yellow)">
-                        <span class="timeline-date">2023 &mdash; Present</span>
+                        <span class="timeline-date">2024 - Present</span>
                         <h3>Bachelor of Computer Science in Cybersecurity & Networking</h3>
                         <p>NCMT, Kathmandu</p>
                         <p class="timeline-desc">Specializing in cybersecurity and networking. Actively involved in coding clubs and security research.</p>
@@ -241,18 +240,10 @@
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-card" style="--accent: var(--pink)">
-                        <span class="timeline-date">2024</span>
-                        <h3>Web Development Intern</h3>
-                        <p>Freelance / Personal Projects</p>
-                        <p class="timeline-desc">Built multiple responsive websites for local clients and contributed to open-source frontend projects.</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-card" style="--accent: var(--blue)">
-                        <span class="timeline-date">2024</span>
-                        <h3>Cybersecurity Research</h3>
-                        <p>Self-directed Learning</p>
-                        <p class="timeline-desc">Conducted network vulnerability assessments and built Python tools for penetration testing and security analysis.</p>
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h3>Bishnumati Aawashiya Secondary School</h3>
+                        <p>Kathmandu, Nepal</p>
+                        <p class="timeline-desc">Studied Computer Science, developing a strong foundation in analytical thinking and problem-solving.</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
@@ -270,21 +261,24 @@
         <section id="contact" class="contact-section">
             <h2 class="section-title fade-in">Get In <span class="highlight yellow">Touch</span></h2>
             <div class="contact-wrapper">
-                <form class="contact-form fade-in" id="contactForm">
+                <form class="contact-form fade-in" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required aria-label="Your name">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required aria-label="Your email">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="6" required aria-label="Your message"></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="6" required aria-label="Your message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">
                         <i class="fa-solid fa-paper-plane"></i> Send Message
                     </button>
                     <div class="form-success" id="formSuccess">
                         <i class="fa-solid fa-check-circle"></i> Message sent successfully!
+                    </div>
+                    <div class="form-error" id="formError">
+                        <i class="fa-solid fa-circle-exclamation"></i> Failed to send message. Please try again.
                     </div>
                 </form>
                 <div class="contact-info fade-in">
