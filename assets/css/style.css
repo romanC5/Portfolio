@@ -481,14 +481,8 @@ h1, h2, h3, h4 {
   background-color: var(--accent);
 }
 
-.about-card:nth-child(1) { transform: rotate(-0.5deg); }
-.about-card:nth-child(2) { transform: rotate(0.5deg); }
-.about-card:nth-child(3) { transform: rotate(0.3deg); }
-.about-card:nth-child(4) { transform: rotate(-0.3deg); }
-
 .about-card:hover {
-  transform: rotate(0deg) translateY(-6px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-lg);
 }
 
 .card-icon {
