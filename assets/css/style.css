@@ -1027,9 +1027,14 @@ h1, h2, h3, h4 {
   box-shadow: 2px 2px 0px var(--black);
 }
 
-.social-card:nth-child(1):hover { background-color: var(--yellow); }
-.social-card:nth-child(2):hover { background-color: var(--pink); }
-.social-card:nth-child(3):hover { background-color: var(--blue);}
+.social-card:nth-child(1):hover { background-color: var(--black); color: var(--white); }
+.social-card:nth-child(2):hover { background-color: var(--blue); color: var(--black); }
+.social-card:nth-child(3):hover { background-color: var(--pink); color: var(--white); }
+
+.social-card:hover > i {
+  background-color: var(--white);
+  color: var(--black);
+}
 
 .social-card > i {
   font-size: 24px;
@@ -1041,7 +1046,9 @@ h1, h2, h3, h4 {
   border: 3px solid var(--black);
   border-radius: 12px;
   background-color: var(--bg);
+  color: var(--black);
   flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-card div {
