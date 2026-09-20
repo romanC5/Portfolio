@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   
     //  TYPED.JS Hero typing animation
- const typed = new Typed('.multiple-text',  {
+  new Typed('.multiple-text',  {
     strings: ['Frontend Developer', 'Student', 'Web Developer', 'Gamer', 'Cybersecurity Enthusiast'],
     typeSpeed: 80,
     backSpeed: 80,
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('nav-bar');
 
   function updateNavbar() {
+    if (!navbar) return;
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
@@ -132,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const formData = new FormData(form);
     formData.append("access_key", "0fd112a0-b270-421c-99b1-838d48ade931");
 
-    const originalText = submitBtn.textContent;
+    const originalHTML = submitBtn.innerHTML;
 
-    submitBtn.textContent = "Sending...";
+    submitBtn.innerHTML = "Sending...";
     submitBtn.disabled = true;
 
     try {
@@ -155,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       alert("Something went wrong. Please try again.");
     } finally {
-      submitBtn.textContent = originalText;
+      submitBtn.innerHTML = originalHTML;
       submitBtn.disabled = false;
     }
   });
